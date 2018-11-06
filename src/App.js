@@ -4,7 +4,11 @@ import './App.css';
 
 class App extends Component {
   componentDidMount() {
-      fetch('api/version/').then(response => {
+      fetch('/users/scit/', {
+          method: 'GET',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+      }).then(response => {
         console.log('response', response.json())
       });
   }
